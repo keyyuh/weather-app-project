@@ -1,0 +1,124 @@
+.main {
+  font-family: "Silkscreen", cursive;
+  background-color: rgb(121, 162, 186);
+  box-shadow: 2px 2px 3px rgb(49, 54, 63);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  max-width: 720px;
+  min-width: 400px;
+  margin: 0 auto;
+}
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/772/original/7270229.jpg?1667694762");
+  background-size: 1800px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 400px;
+  padding-right: 300px;
+}
+#city-input {
+  width: 80%;
+  padding: 3px;
+  border-radius: 7px;
+  border-style: none;
+  box-shadow: 2px 2px 0 rgb(62, 89, 144);
+}
+.searchbtn {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  position: relative;
+  bottom: 2px;
+  border-radius: 7px;
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+  max-width: 80px;
+  margin: 8px;
+}
+#current-location {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  position: relative;
+  bottom: 2px;
+  border-radius: 7px;
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+  max-width: 65px;
+}
+#city-name {
+  margin: 10px;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#current-weather {
+  text-transform: uppercase;
+}
+.current-temp {
+  font-size: 30px;
+  text-align: center;
+}
+.units {
+  position: relative;
+  bottom: 13px;
+  text-align: center;
+  font-size: 12px;
+}
+#imperial-temp {
+  color: black;
+  text-decoration: none;
+  margin: 3px;
+}
+#imperial-temp:hover {
+  color: blue;
+  cursor: pointer;
+}
+#metric-temp {
+  color: black;
+  text-decoration: none;
+  margin: 3px;
+}
+#metric-temp:hover {
+  color: blue;
+  cursor: pointer;
+}
+.break {
+  position: relative;
+  bottom: 13px;
+  margin: 1px;
+  font-size: 12px;
+}
+.weather {
+  font-size: 50px;
+  text-align: left;
+}
+.col-6 {
+  font-weight: 600;
+  margin: 10px;
+  font-size: 15px;
+}
+.week {
+  background-color: rgb(206, 223, 233);
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 rgb(87, 100, 127);
+  padding: 5px;
+  margin-top: 20px;
+}
+.col {
+  font-weight: 600;
+}
+.forecast {
+  font-size: 30px;
+}
+.temperature {
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+}
+.highTemp {
+  font-size: 12px;
+  color: rgb(70, 67, 67);
+  margin: 2px;
+}
