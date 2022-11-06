@@ -48,8 +48,8 @@ body {
   max-width: 65px;
 }
 #city-name {
-  margin: 10px;
-  font-size: large;
+  margin: 5px;
+  font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -95,6 +95,7 @@ body {
   text-align: left;
 }
 .col-6 {
+  padding-top: 10px;
   font-weight: 600;
   margin: 10px;
   font-size: 15px;
