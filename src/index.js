@@ -17,23 +17,6 @@ function formatDate() {
 }
 formatDate();
 
-function showTempF(event) {
-  event.preventDefault();
-  let displayTempF = document.querySelector("#temp");
-  displayTempF.innerHTML = 77;
-}
-let convertToF = document.querySelector("#imperial-temp");
-convertToF.addEventListener("click", showTempF);
-
-function showTempC(event) {
-  event.preventDefault();
-  let displayTempC = document.querySelector("#temp");
-  displayTempC.innerHTML = 25;
-}
-
-let convertToC = document.querySelector("#metric-temp");
-convertToC.addEventListener("click", showTempC);
-
 function searchCity(city) {
   const apiKey = `2a47b687e58bcb415fc20ba1bc5a6217`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -58,6 +41,19 @@ function showWeather(event) {
       "src",
       `http://openweathermap.org/img/wn/${event.data.weather[0].icon}@2x.png`
     );
+  imperialTemp = event.data.main.temp;
+}
+
+function showTempF(event) {
+  event.preventDefault();
+  let displayTempF = document.querySelector("#temp");
+  displayTempF.innerHTML = Math.round(imperialTemp);
+}
+
+function showTempC(event) {
+  event.preventDefault();
+  let displayTempC = document.querySelector("#temp");
+  displayTempC.innerHTML = Math.round((imperialTemp - 32) * (5 / 9));
 }
 
 function searchBar(event) {
@@ -78,6 +74,14 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
+
+let imperialTemp = null;
+
+let convertToF = document.querySelector("#imperial-temp");
+convertToF.addEventListener("click", showTempF);
+
+let convertToC = document.querySelector("#metric-temp");
+convertToC.addEventListener("click", showTempC);
 
 let search = document.querySelector("#search-bar");
 search.addEventListener("submit", searchBar);
