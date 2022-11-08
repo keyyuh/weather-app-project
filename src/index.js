@@ -46,12 +46,16 @@ function showWeather(event) {
 
 function showTempF(event) {
   event.preventDefault();
+  convertToC.classList.remove("active");
+  convertToF.classList.add("active");
   let displayTempF = document.querySelector("#temp");
   displayTempF.innerHTML = Math.round(imperialTemp);
 }
 
 function showTempC(event) {
   event.preventDefault();
+  convertToC.classList.add("active");
+  convertToF.classList.remove("active");
   let displayTempC = document.querySelector("#temp");
   displayTempC.innerHTML = Math.round((imperialTemp - 32) * (5 / 9));
 }

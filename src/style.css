@@ -69,23 +69,13 @@ body {
   text-align: center;
   font-size: 12px;
 }
-#imperial-temp {
-  color: black;
-  text-decoration: none;
-  margin: 3px;
-}
-#imperial-temp:hover {
-  color: blue;
-  cursor: pointer;
-}
 #metric-temp {
+  text-decoration: none;
+}
+.units .active {
   color: black;
   text-decoration: none;
-  margin: 3px;
-}
-#metric-temp:hover {
-  color: blue;
-  cursor: pointer;
+  cursor: default;
 }
 .break {
   position: relative;
