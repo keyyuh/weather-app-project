@@ -23,26 +23,33 @@
     <body>
       <div class="container">
         <div class="main">
-          <form id="search-bar">
-          <input type="text" placeholder="Search for a city..." id="city-input" autocomplete="off"/>
-          <input type="submit" class="searchbtn" value="Search"/>
-          <input type="button" id="current-location" value="📍"
-          </form>
-          <div id="city-name"></div>
           <div class="row">
-            <div class="col-6">
-              <span id="time"></span>
-              <span id="current-weather"></span>
-              <div class="col-6">
-                <div id="humidity"></div>
-                <div id="wind"></div>
+            <form id="search-bar">
+            <input type="search" placeholder="Search for a city..." id="city-input" autocomplete="off"/>
+            <input type="submit" class="searchbtn" value="Search"/>
+            <input type="button" id="current-location" value="📍">
+            </form>
+          </div>
+          <div id="city-name"></div>
+               <div class="row">
+                  <div class="col-6">
+                    <span id="time"></span>
+                    <span id="current-weather"></span>
+                    <div class="col-6">
+                    <div id="humidity"></div>
+                    <div id="wind"></div>
+                  </div>
+                  </div> 
+                  <div class="col">
+                        <span class="current-temp" id="temp"></span>
+                        <span class="units"> <a href="#" id="metric-temp">°C </a></span> <span class="break">|</span><span class="units"><a href="#" id="imperial-temp">°F</a></span>
+                        <div class="weather"> <img src="" id="weather-icon"/></div>
+                    </div> 
+                  <div class="col-6">
+                    <div id="humidity"></div>
+                    <div id="wind"></div>
+                  </div>
               </div>
-            </div>
-              <div class="col">
-                <span class="current-temp" id="temp"></span>
-                <span class="units"> <a href="#" id="metric-temp">°C </a></span> <span class="break">|</span><span class="units"><a href="#" id="imperial-temp">°F</a></span>
-                <div class="weather"> <img src="" id="weather-icon"/></div>
-             </div>
              <div class="container text-center">
                 <div class="week">
                   <div class="row">
