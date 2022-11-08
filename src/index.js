@@ -52,6 +52,12 @@ function showWeather(event) {
   )}mph`;
   document.querySelector(`#current-weather`).innerHTML =
     event.data.weather[0].main;
+  document
+    .querySelector(`#weather-icon`)
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${event.data.weather[0].icon}@2x.png`
+    );
 }
 
 function searchBar(event) {
