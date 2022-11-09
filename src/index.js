@@ -24,6 +24,23 @@ function searchCity(city) {
   document.querySelector(`#city-name`).innerHTML = city;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector(`#forecast`);
+  let forecastHTML = `<div class= "row">`;
+  let days = ["WED", "THURS", "FRI", "SAT", "SUN"];
+  days.forEach(function (days) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+      <div class = "forecat-day">${days}</div>
+        <div class="forecast">🌤️</div>
+        <div class="temperature">45°<span class="highTemp">55°</span></div>
+    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(event) {
   document.querySelector("#city-name").innerHTML = event.data.name;
   document.querySelector(`#temp`).innerHTML = Math.round(event.data.main.temp);
@@ -95,3 +112,4 @@ currentLocationBtn.addEventListener("click", getCurrentLocation);
 
 //for default display
 searchCity(`Seattle`);
+displayForecast();
