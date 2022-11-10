@@ -41,22 +41,19 @@
             <span id="time"></span>
             <span id="current-weather"></span>
             <div class="col-6">
+              <div id="feels-like"></div>
               <div id="humidity"></div>
               <div id="wind"></div>
             </div>
           </div>
           <div class="col">
-            <span class="current-temp" id="temp"></span>
-            <span class="units"> <a href="#" id="metric-temp">°C </a></span>
-            <span class="break">|</span
-            ><span class="units"
-              ><a href="#" id="imperial-temp" class="active">°F</a></span
-            >
-            <div class="weather"><img src="" id="weather-icon" /></div>
-          </div>
-          <div class="col-6">
-            <div id="humidity"></div>
-            <div id="wind"></div>
+            <div id="current-weather-display">
+              <span class="weather"><img src="" id="weather-icon" /></span>
+              <span class="current-temp" id="temp"></span>
+              <span class="units">°F</span>
+              <div id="sunrise"></div>
+              <div id="sunset"></div>
+            </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
         </div>

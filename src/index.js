@@ -29,14 +29,30 @@ function searchCity(city) {
   const apiKey = `2a47b687e58bcb415fc20ba1bc5a6217`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showWeather);
-  document.querySelector(`#city-name`).innerHTML = city;
 }
 
 function showWeather(response) {
+  let sunrise = response.data.sys.sunrise * 1000;
+  let date = new Date(sunrise);
+  let hours = date.getHours().toString().padStart(2, 0);
+  let minutes = date.getMinutes().toString().padStart(2, 0);
+  document.querySelector("#sunrise").innerHTML = `Sunrise: ${hours}:${minutes}`;
+
+  let sunset = response.data.sys.sunset * 1000;
+  let nightDate = new Date(sunset);
+  let nightHours = nightDate.getHours().toString().padStart(2, 0);
+  let nightMinutes = nightDate.getMinutes().toString().padStart(2, 0);
+  document.querySelector(
+    "#sunset"
+  ).innerHTML = `Sunset: ${nightHours}:${nightMinutes}`;
+
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector(`#temp`).innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#feels-like").innerHTML = `Feels like: ${Math.round(
+    response.data.main.feels_like
+  )}°`;
   document.querySelector(
     `#humidity`
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -86,22 +102,6 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-function showTempF(event) {
-  event.preventDefault();
-  convertToC.classList.remove("active");
-  convertToF.classList.add("active");
-  let displayTempF = document.querySelector("#temp");
-  displayTempF.innerHTML = Math.round(imperialTemp);
-}
-
-function showTempC(event) {
-  event.preventDefault();
-  convertToC.classList.add("active");
-  convertToF.classList.remove("active");
-  let displayTempC = document.querySelector("#temp");
-  displayTempC.innerHTML = Math.round((imperialTemp - 32) * (5 / 9));
-}
-
 function searchBar(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -120,14 +120,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
-
-let imperialTemp = null;
-
-let convertToF = document.querySelector("#imperial-temp");
-convertToF.addEventListener("click", showTempF);
-
-let convertToC = document.querySelector("#metric-temp");
-convertToC.addEventListener("click", showTempC);
 
 let search = document.querySelector("#search-bar");
 search.addEventListener("submit", searchBar);

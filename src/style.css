@@ -5,7 +5,8 @@
   border-radius: 10px;
   padding: 20px;
   text-align: left;
-  max-width: 720px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
 }
 body {
@@ -51,13 +52,32 @@ body {
   width: 30px;
 }
 #city-name {
-  margin: 5px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
 }
+#time {
+  font-weight: 600;
+  font-size: 15px;
+}
 #current-weather {
+  font-weight: 600;
+  font-size: 15px;
   text-transform: uppercase;
+}
+#humidity {
+  width: fit-content;
+}
+#wind {
+  width: fit-content;
+}
+#sunset {
+  padding-left: 45px;
+  font-size: 13px;
+}
+#sunrise {
+  padding-left: 45px;
+  font-size: 13px;
 }
 .current-temp {
   font-size: 30px;
@@ -65,48 +85,31 @@ body {
 }
 .units {
   position: relative;
-  bottom: 13px;
+  bottom: 10px;
   text-align: center;
-  font-size: 12px;
-}
-#metric-temp {
-  text-decoration: none;
-}
-#imperial-temp {
-  text-decoration: none;
-}
-.units .active {
-  color: black;
-  text-decoration: none;
-  cursor: default;
-}
-.break {
-  position: relative;
-  bottom: 13px;
-  margin: 1px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .weather {
   font-size: 50px;
   text-align: left;
 }
 .col-6 {
-  padding-top: 10px;
+  padding-top: 15px;
   font-weight: 600;
-  margin: 10px;
+  margin: 5px;
   font-size: 15px;
 }
 .col {
   font-weight: 600;
 }
+#current-weather-display {
+  position: relative;
+  bottom: 12px;
+}
 .weather-forecast {
   padding: 5px;
   text-align: center;
   font-weight: bolder;
-}
-.forecast {
-  text-align: center;
-  font-size: 30px;
 }
 .temperature {
   text-align: center;
