@@ -5,7 +5,7 @@
   border-color: rgb(32, 31, 31);
   border-radius: 10px;
   box-shadow: 2px 2px 0 rgba(36, 45, 63, 0.581);
-  padding: 20px;
+  padding: 12px;
   text-align: left;
   width: 100%;
   max-width: 700px;
@@ -13,7 +13,7 @@
 }
 body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/772/original/7270229.jpg?1667694762");
-  background-size: 1720px;
+  background-size: 1700px;
   padding-top: 150px;
   padding-bottom: 150px;
 }
@@ -52,15 +52,18 @@ body {
   width: 35px;
 }
 #city-name {
+  padding-left: 5px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
 }
 #date-time {
+  padding-left: 3px;
   font-weight: 600;
   font-size: 15px;
 }
 #current-weather {
+  padding-left: 3px;
   padding-top: 10px;
   font-weight: 600;
   font-size: 15px;
@@ -84,6 +87,8 @@ body {
   font-size: 15px;
 }
 .col-6 {
+  position: relative;
+  left: 3px;
   padding-top: 15px;
   font-weight: 600;
   margin-bottom: 8px;
