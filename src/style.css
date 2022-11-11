@@ -1,8 +1,10 @@
 .main {
   font-family: "Silkscreen", cursive;
   background-color: rgb(121, 162, 186);
-  box-shadow: 2px 2px 3px rgb(49, 54, 63);
+  border-style: solid;
+  border-color: rgb(32, 31, 31);
   border-radius: 10px;
+  box-shadow: 2px 2px 0 rgba(36, 45, 63, 0.581);
   padding: 20px;
   text-align: left;
   width: 100%;
@@ -17,11 +19,12 @@ body {
   margin: 0 auto;
 }
 #city-input {
-  width: 75%;
+  width: 73%;
   padding: 4px;
   border-radius: 7px;
-  border-style: none;
-  box-shadow: 2px 2px 0 rgb(62, 89, 144);
+  border-style: solid;
+  border-color: rgb(32, 31, 31);
+  box-shadow: 2px 2px 0 rgb(46, 67, 107);
   margin: 3px;
 }
 .searchbtn {
@@ -32,71 +35,59 @@ body {
   border-radius: 7px;
   border-style: none;
   padding: 5px;
-  margin: 3px;
+  margin-left: 10px;
   width: 90px;
-  height: 32px;
+  height: 36px;
 }
 #current-location {
   background-color: black;
   box-shadow: 2px 2px 0 rgb(51, 55, 63);
   color: white;
-  font-size: 12px;
-  position: relative;
-  bottom: 1.9px;
+  font-size: 15px;
   border-radius: 7px;
   size: 32px;
   border-style: none;
   padding: 5px;
-  margin: 5px;
-  height: 32px;
-  width: 30px;
+  margin-left: 10px;
+  height: 36px;
+  width: 35px;
 }
 #city-name {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
 }
-#time {
+#date-time {
   font-weight: 600;
   font-size: 15px;
 }
 #current-weather {
+  padding-top: 10px;
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
 }
-#humidity {
-  width: fit-content;
-}
-#wind {
-  width: fit-content;
-}
-#sunset {
-  padding-left: 45px;
-  font-size: 13px;
-}
-#sunrise {
-  padding-left: 45px;
-  font-size: 13px;
-}
-.current-temp {
+#temp {
   font-size: 30px;
-  text-align: center;
+}
+#temp-element {
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+#weather-icon {
+  width: 100px;
 }
 .units {
   position: relative;
-  bottom: 10px;
+  bottom: 10.3px;
   text-align: center;
   font-size: 15px;
-}
-.weather {
-  font-size: 50px;
-  text-align: left;
 }
 .col-6 {
   padding-top: 15px;
   font-weight: 600;
-  margin: 5px;
+  margin-bottom: 10px;
   font-size: 15px;
 }
 .col {
@@ -104,7 +95,8 @@ body {
 }
 #current-weather-display {
   position: relative;
-  bottom: 12px;
+  top: 5px;
+  left: 50px;
 }
 .weather-forecast {
   padding: 5px;

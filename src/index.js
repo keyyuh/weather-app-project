@@ -1,5 +1,7 @@
-let now = new Date();
-function formatDate() {
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let hour = now.getHours();
+  let minute = now.getMinutes().toString().padStart(2, 0);
   const days = [
     `SUNDAY`,
     `MONDAY`,
@@ -9,13 +11,9 @@ function formatDate() {
     `FRIDAY`,
     `SATURDAY`,
   ];
-  let currentTime = document.querySelector("#time");
   let currentDay = days[now.getDay()];
-  let hour = now.getHours();
-  let minute = now.getMinutes().toString().padStart(2, 0);
-  currentTime.innerHTML = `${currentDay} ${hour}:${minute}`;
+  return `${currentDay} ${hour}:${minute}`;
 }
-formatDate();
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -32,20 +30,9 @@ function searchCity(city) {
 }
 
 function showWeather(response) {
-  let sunrise = response.data.sys.sunrise * 1000;
-  let date = new Date(sunrise);
-  let hours = date.getHours().toString().padStart(2, 0);
-  let minutes = date.getMinutes().toString().padStart(2, 0);
-  document.querySelector("#sunrise").innerHTML = `Sunrise: ${hours}:${minutes}`;
-
-  let sunset = response.data.sys.sunset * 1000;
-  let nightDate = new Date(sunset);
-  let nightHours = nightDate.getHours().toString().padStart(2, 0);
-  let nightMinutes = nightDate.getMinutes().toString().padStart(2, 0);
-  document.querySelector(
-    "#sunset"
-  ).innerHTML = `Sunset: ${nightHours}:${nightMinutes}`;
-
+  document.querySelector("#date-time").innerHTML = `LAST UPDATED: ${formatDate(
+    response.data.dt * 1000
+  )}`;
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector(`#temp`).innerHTML = Math.round(
     response.data.main.temp
@@ -60,7 +47,7 @@ function showWeather(response) {
     response.data.wind.speed
   )}mph`;
   document.querySelector(`#current-weather`).innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document
     .querySelector(`#weather-icon`)
     .setAttribute(
@@ -83,7 +70,7 @@ function displayForecast(response) {
       <div class = "forecat-day">${formatDay(forecastDay.dt)}</div>
         <div class="forecast"></div> <img src= "http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
-        }@2x.png" width="60px"/>
+        }@2x.png" width="70px"/>
         <div class="temperature"><span class="maxTemp">${Math.round(
           forecastDay.temp.max
         )}°</span> <span class="minTemp">${Math.round(

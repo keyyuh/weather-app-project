@@ -30,6 +30,7 @@
               placeholder="Search for a city..."
               id="city-input"
               autocomplete="off"
+              autofocus="off"
             />
             <input type="submit" class="searchbtn" value="Search" />
             <input type="button" id="current-location" value="📍" />
@@ -38,7 +39,7 @@
         <div id="city-name"></div>
         <div class="row">
           <div class="col-6">
-            <span id="time"></span>
+            <span id="date-time"></span>
             <span id="current-weather"></span>
             <div class="col-6">
               <div id="feels-like"></div>
@@ -48,11 +49,10 @@
           </div>
           <div class="col">
             <div id="current-weather-display">
-              <span class="weather"><img src="" id="weather-icon" /></span>
-              <span class="current-temp" id="temp"></span>
-              <span class="units">°F</span>
-              <div id="sunrise"></div>
-              <div id="sunset"></div>
+              <div id="temp-element">
+                <span id="temp"></span><span class="units">°F</span>
+              </div>
+              <div class="weather"><img src="" id="weather-icon" /></div>
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
