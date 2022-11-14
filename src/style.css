@@ -8,6 +8,7 @@
   padding: 12px;
   text-align: left;
   width: 100%;
+  min-width: 410px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -64,7 +65,7 @@ body {
 }
 #current-weather {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 #temp {
@@ -73,15 +74,15 @@ body {
 #temp-element {
   margin: 0 auto;
   position: relative;
-  right: 60px;
+  right: 30px;
   top: 10px;
-  padding-left: 15px;
   text-align: center;
 }
 #weather-icon {
   display: block;
   position: relative;
-  left: 60px;
+  bottom: 15px;
+  margin: 0 auto;
   width: 100px;
 }
 .units {
