@@ -63,21 +63,25 @@ body {
   font-size: 15px;
 }
 #current-weather {
-  padding-left: 3px;
-  padding-top: 10px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 #temp {
   font-size: 30px;
 }
 #temp-element {
+  margin: 0 auto;
   position: relative;
-  left: 20px;
+  right: 60px;
   top: 10px;
+  padding-left: 15px;
+  text-align: center;
 }
 #weather-icon {
+  display: block;
+  position: relative;
+  left: 60px;
   width: 100px;
 }
 .units {
